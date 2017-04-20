@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity"
+    android:padding="@dimen/espacio_separacion_16"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <android.support.design.widget.TextInputEditText
+            android:id="@+id/tietNombre"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="@dimen/espacio_separacion_16"
+            android:hint="@string/nombre" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingBottom="@dimen/espacio_separacion_16">
+
+            <android.support.design.widget.TextInputEditText
+                android:id="@+id/tietFechaNacimiento"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/fecha_nacimiento" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/tres_puntos"
+                android:onClick="showDatePickerDialog" />
+
+        </LinearLayout>
+
+        <android.support.design.widget.TextInputEditText
+            android:id="@+id/tietTelefono"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="@dimen/espacio_separacion_16"
+            android:inputType="phone"
+            android:hint="@string/telefono" />
+
+        <android.support.design.widget.TextInputEditText
+            android:id="@+id/tietEMail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="@dimen/espacio_separacion_16"
+            android:inputType="textWebEmailAddress"
+            android:hint="@string/email" />
+
+        <android.support.design.widget.TextInputEditText
+            android:id="@+id/tietDescripcionContacto"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="@dimen/espacio_separacion_16"
+            android:hint="@string/descripcion_contacto" />
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:text="@string/confirmar_contacto"
+            android:textAllCaps="false"
+            android:onClick="confirmarContacto"/>
+
+    </RelativeLayout>
+
+</LinearLayout>
